@@ -1,0 +1,320 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center; /*To Center the text-content*/
+    min-height: 100vh; /*To Middle the text-content*/
+    background-color: #f1efef;
+}
+
+.wrapper {
+    background-color: #ffffff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 129px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.form {
+    padding: 25px 30px;
+}
+.form header {
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.form form {
+    margin: 20xp 0;
+}
+.form form .error-txt {
+    background-color: rgba(187, 0, 0, 0.836);
+    color: rgba(255, 255, 255, 0.5);
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    margin-top: 10px;
+    display: none;
+}
+.form form .name-details {
+    display: flex;
+    margin-top: 10px;
+}
+form .name-details .field:first-child {
+    margin-right: 10px; /*gap*/
+}
+form .name-details .field:last-child {
+    margin-left: 10px; /*gap*/
+}
+.form form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+}
+.form form .field label {
+    margin-bottom: 2px;
+}
+.form form .field input {
+    outline: none;
+}
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.form form .image input {
+    font-size: 17px;
+}
+.form form .button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #010c20;
+    color: #fff ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a{
+    color: #4203f0;
+}
+.form .link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Users */
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.users {
+    padding: 25px 30px;
+}
+.users header,
+.users-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+:is(.users, .users-list) .content{
+    display: flex;
+    align-items: center;
+}
+.users header .content img {
+    height: 50px;
+    width: 50px;
+}
+:is(.users, .users-list) .details {
+    margin-left: 15px;
+    color: rgba(0,0,0,0.5);
+}
+:is(.users, .users-list) .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+.users header .logout {
+    background-color: #010c20;
+    font-size: 17px;
+    color: #fff ;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+.users .search {
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.users .search .text {
+    font-size: 18px;
+}
+.users .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    border: 1px solid #010c20;
+    padding: 0 13px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.users .search button {
+    width: 47px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background-color: #010c20;
+    color: #fff ;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+/* Message */
+.users-list {
+    max-height: 350px; /*to read the maximum height*/
+    overflow-y: auto; /*to activate scrollbar*/ 
+    /* scrollbar-width: none; */
+}
+/* .users-list::-webkit-scrollbar {
+    width: 0px;
+}
+.users-list::-moz-scrollbar {
+    width: 0px;
+} */
+.users-list a {
+    padding-right: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom-color: #eceaea;
+}
+.users-list a:last-child {
+    border: none;
+    margin-bottom: 0px;
+}
+.users-list a .content img {
+    height: 40px;
+    width: 40px;
+}
+.users-list a .content p {
+    color: #091b3b;
+}
+.users-list a .status {
+    font-size: 12px;
+    color: #4203f0;
+}
+.users-list a .status.offline {
+    color: #6d6d6d;
+}
+
+/* message */
+.message header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+.message header .back {
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+}
+.message header img {
+    height: 45px;
+    width: 45px;
+    margin: 0 15px;
+}
+.message header span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.box-chat {
+    overflow-y: auto;
+    height: 500px;
+    background-color: #e0e2e6; /*#091b3b*/
+    padding: 10px 30px 20px 30px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+.box-chat .message {
+    margin: 15px 0;
+}
+.messages {
+    margin: 12px 0 0 0;
+}
+.box-chat .messages p {
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0 16px 16px rgb(0 0 0 / 10%);
+}
+.box-chat .outgoing {
+    display: flex;
+}
+.box-chat .incoming img {
+    height: 35px;
+    width: 35px;
+}
+.box-chat .incoming {
+    display: flex;
+    align-items: flex-end;
+}
+.incoming .details {
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+}
+.incoming .details p {
+    background-color: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+}
+.outgoing .details {
+    min-width: calc(100% - 130px);
+    margin-left: auto;
+}
+.outgoing .details p {
+    background-color: #091b3b;
+    color: #e0e2e6;
+    border-radius: 18px 18px 0 18px;
+}
+
+
+/* Sender Input */
+.message .typo {
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.typo input {
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    border: 1px solid #fff;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.typo button {
+    border: none;
+    outline: none;
+    width: 55px;
+    border-radius: 0 5px 5px 0;
+    background-color: #081a3a;
+    color: #e0e2e6;
+    cursor: pointer;
+    font-size: 19px;
+}
