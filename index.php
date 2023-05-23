@@ -1,3 +1,30 @@
+<?php
+
+// // Check if the signup form is submitted
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Process signup form
+
+//     // If signup is successful, set $signup_successful to true
+//     // Otherwise, set it to false
+//     $signup_successful = false; // Initialize the variable
+
+//     // Perform the necessary checks and operations to determine the signup success
+//     if ($signup_success_condition) {
+//         $signup_successful = true; // Set the variable to true if signup is successful
+//     }
+
+//     // If signup is successful, perform the redirection
+//     if ($signup_successful) {
+//         header("Location: ../users/user.php"); // Redirect to user.php
+//         exit(); // Terminate the script after redirection
+//     } else {
+//         // Handle other scenarios or display error messages
+//     }
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +50,7 @@
     <div class="wrapper">
         <section class="form signup">
             <header>ChatME</header>
-            <form action="#" method="POST" enctype="multipart/form-data">
+            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="error-txt"></div>
                 <div class="name-details">
                     <div class="field input">
@@ -56,7 +83,7 @@
         </section>
     </div>
 
-    <script src="assets/js/signup.js"></script>
+    <script src="js/signup.js"></script>
 
 </body>
 </html>

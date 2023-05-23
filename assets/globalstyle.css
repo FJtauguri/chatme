@@ -32,6 +32,7 @@ body{
     font-weight: 600;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(0,0,0,0.5);
+    margin-bottom: 10px;
 }
 .form form {
     margin: 20xp 0;
@@ -65,6 +66,7 @@ form .name-details .field:last-child {
 }
 .form form .field label {
     margin-bottom: 2px;
+    /* margin-top: 10px; */
 }
 .form form .field input {
     outline: none;
@@ -76,6 +78,9 @@ form .name-details .field:last-child {
     padding: 0 10px;
     border: 1px solid rgba(0,0,0,0.5);
 }
+/* .form .for {
+    margin-top: 10px;
+} */
 .form form .image input {
     font-size: 17px;
 }

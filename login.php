@@ -8,7 +8,7 @@
 
     <!-- ============================================================= -->
     <!-- Local CSS -->
-    <link rel="stylesheet" href="./assets/globalstyle.css">
+    <link rel="stylesheet" href="assets/globalstyle.css">
 
     <!-- AJAX -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
@@ -17,28 +17,28 @@
 <body>
 
     <div class="wrapper">
-        <section class="form signup">
+        <section class="form login">
             <header>ChatME</header>
-            <form action="#" method="post">
+            <form action="#" method="post" class="for" autocomplete="off">
                 <div class="error-txt">
-                    Error Message code:101
+                    
                 </div>
                 <div class="field input">
                     <label>Username</label>
-                    <input type="email" placeholder="Username">
+                    <input name="email" type="email" placeholder="Username">
                 </div>
                 <div class="field input">
                     <label>Password</label>
-                    <input type="password" placeholder="Password">
+                    <input name="password" type="password" placeholder="Password">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
                     <input type="submit" value="Signin">
                 </div>
             </form>
-            <div class="link">Already signup? <a href="login.php">Signin</a></div>
+            <div class="link">Don't have an account? <a href="index.php">Signup</a></div>
         </section>
     </div>
-
+    <script src="js/login.js"></script>
 </body>
 </html>
