@@ -1,7 +1,7 @@
 <?php
     while($row = mysqli_fetch_assoc($sql)){
         $output .= '
-        <a href="#">
+        <a href="./message.php?user_id='.$row['inuq_id'].'"> 
             <div class="content">
                 <img src="../php/ico/'. $row['img'] .'" alt="">
                 <div class="details">

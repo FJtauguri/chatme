@@ -6,6 +6,7 @@ searchButton.onclick = () => {
     searchh.classList.toggle("active");
     searchh.focus();
     searchButton.classList.toggle("active");
+    searchh.value = "";
 };
 
 searchh.onkeyup = () => {
