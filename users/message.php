@@ -45,25 +45,9 @@
                 </div>
             </header>
             <div class="box-chat">
-                <div class="messages outgoing">
-                    <div class="details">
-                        <p>Lorem, ipsum dolor ?</p>
-                    </div>
-                </div>
-                <div class="messages outgoing">
-                    <div class="details">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero incidunt mollitia porro at, ad quasi optio voluptate vitae praesentium quia quisquam eos minus non ullam excepturi ipsum dolorum quas unde?</p>
-                    </div>
-                </div>
-                <div class="messages incoming">
-                    <img src="../assets/profile/Jennie.png" alt="">
-                    <div class="details">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero incidunt mollitia porro at, ad quasi optio voluptate vitae praesentium quia quisquam eos minus non ullam excepturi ipsum dolorum quas unde?</p>
-                    </div>
-                </div>
-                
+
             </div>
-            <form class="typo" action="#" method="post" autocomplete="off">
+            <form class="typo" action="../php/insert-message.php" method="post" autocomplete="off">
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['inuq_id']; ?>" hidden>
                 <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
                 <input class="inputfield" name="msg" type="text" placeholder="Send a message...">
