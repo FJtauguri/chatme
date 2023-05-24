@@ -1,50 +1,6 @@
-<?php
-
-// // Check if the signup form is submitted
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     // Process signup form
-
-//     // If signup is successful, set $signup_successful to true
-//     // Otherwise, set it to false
-//     $signup_successful = false; // Initialize the variable
-
-//     // Perform the necessary checks and operations to determine the signup success
-//     if ($signup_success_condition) {
-//         $signup_successful = true; // Set the variable to true if signup is successful
-//     }
-
-//     // If signup is successful, perform the redirection
-//     if ($signup_successful) {
-//         header("Location: ../users/user.php"); // Redirect to user.php
-//         exit(); // Terminate the script after redirection
-//     } else {
-//         // Handle other scenarios or display error messages
-//     }
-// }
-
+<?php 
+    include_once"header.php";
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <!-- ============================================================= -->
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="./assets/globalstyle.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- AJAX -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
-</head>
 <body>
 
     <div class="wrapper">

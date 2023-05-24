@@ -35,7 +35,7 @@ body{
     margin-bottom: 10px;
 }
 .form form {
-    margin: 20xp 0;
+    margin: 20px 0;
 }
 .form form .error-txt {
     background-color: rgba(187, 0, 0, 0.836);
@@ -175,17 +175,36 @@ form .name-details .field:last-child {
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     outline: none;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.users .search input.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 .users .search button {
     width: 47px;
     height: 42px;
     border: none;
     outline: none;
-    background-color: #010c20;
-    color: #fff ;
+    background-color: #fff ;
+    color: #010c20;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 17px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+.users .search button.active {
+    background-color: #010c20;
+    color: #fff ;
 }
 
 

@@ -1,10 +1,17 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION['inuq_id'])){
+        header("location: ../login.php"); //to prevent user's place be breached
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>ChatMe</title>
 
     <!-- ============================================================= -->
     <!-- Local CSS -->
@@ -18,11 +25,20 @@
     <div class="wrapper">
         <section class="users" id="users">
             <header>
+
+                <?php
+                    include_once "../php/config.php";
+                    $sql = mysqli_query($conn, "SELECT * FROM users WHERE inuq_id = {$_SESSION['inuq_id']}");
+                    if(mysqli_num_rows($sql) > 0){
+                        $row = mysqli_fetch_assoc($sql);
+                    }
+                ?>
+
                 <div class="content">
-                    <img src="../assets/profile/Jennie.png" alt="">
+                    <img src="../php/ico/<?php echo $row['img']?>" alt="">
                     <div class="details">
-                        <span>Coder</span>
-                        <p>Active now</p>
+                        <span><?php echo $row['fname']?></span>
+                        <p><?php echo $row['status']?></p>
                     </div>
                 </div>
                 <a href="#" class="logout">Logout</a>
@@ -33,119 +49,13 @@
                 <button id="but"><i class="fas fa-search"></i></button>
             </div>
             <div class="users-list">
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="#" alt="">
-                        <div class="details">
-                            <span>Rose</span>
-                            <p>Hola! Jennie</p>
-                        </div>
-                    </div>
-                    <div class="status">
-                        <i class="fas fa-circle"></i>
-                    </div>
-                </a>
+
             </div>
             
         </section>
     </div>
-    <script src="../assets/js/search.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/users.js"></script>
     <script>
         // const searchbar = document.querySelector(".wrapper .users .search #input");
         // const searchbut = document.querySelector(".wrapper .users .search #but");
