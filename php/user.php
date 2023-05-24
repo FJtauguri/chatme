@@ -1,6 +1,7 @@
 <?php 
     session_start();
     include_once"config.php";
+    $outgo = $_SESSION['inuq_id'];
     $sql = mysqli_query($conn, "SELECT * FROM users");
     $output = "";
     if (mysqli_num_rows($sql) == 1) {
